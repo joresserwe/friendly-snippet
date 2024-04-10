@@ -29,7 +29,28 @@
     },
     "reactFunctionComponent": {
         "prefix": "rfc",
-        "body": "export const ${TM_FILENAME_BASE} = (props : {}) => {\n\treturn (\n\t\t<div>\n\t\t\t$0\n\t\t</div>\n\t)\n}",
+        "body": [
+            "const ${1:${TM_FILENAME_BASE}} = () => {",
+            "  return (",
+            "    ${2:second}",
+            "  )",
+            "}",
+            "",
+            "export default ${1:first}"
+        ],
+        "description": "Creates a React functional component without PropTypes"
+    },
+    "reactFunctionComponentWithArgument": {
+        "prefix": "rfca",
+        "body": [
+            "const ${1:${TM_FILENAME_BASE}} = ({${2:second}}: {${3:third}}) => {",
+            "  return (",
+            "    ${4:forth}",
+            "  )",
+            "}",
+            "",
+            "export default ${1:first}"
+        ],
         "description": "Creates a React functional component without PropTypes"
     },
     "reactFunctionComponentWithEmotion": {
